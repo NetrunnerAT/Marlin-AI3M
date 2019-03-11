@@ -256,7 +256,7 @@ void AnycubicTFTClass::StopPrint(){
   }
   else if ((current_position[Z_AXIS]>=200))
   {
-    enqueue_and_echo_commands_P(PSTR("G91\nG1 Z1 F240\G90"));
+    enqueue_and_echo_commands_P(PSTR("G91\nG1 Z1 F240\nG90"));
   }
   #if FAN_COUNT > 0
     for (uint8_t i = 0; i < FAN_COUNT; i++) fanSpeeds[i] = 0;
